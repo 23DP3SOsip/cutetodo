@@ -13,7 +13,9 @@ async function loadTasks() {
     div.innerHTML = `
       <h3>${task.title}</h3>
       <p>${task.description}</p>
-      <p>Status: ${task.status}</p>
+      <p>Statuss: ${task.status}</p>
+      <p>Uzstaisits: ${new Date(task.createdAt).toLocaleString()}</p>
+      <p>Updeitots: ${new Date(task.updatedAt).toLocaleString()}</p>
       <button onclick="toggleStatus('${task._id}', '${task.status}')">Toggle Status</button>
       <button onclick="deleteTask('${task._id}')">Delete</button>
     `;
